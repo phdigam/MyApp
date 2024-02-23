@@ -1,14 +1,4 @@
 <resources>
-    <string name="app_name">MyApp</string>
-    <string name="find_beer">Find Beer</string>
-    <string name="beer_types">Beer types</string>
-    <string name="brands">No beer selected</string>
-    <string-array name="beer_colors">
-        <item> </item>
-        <item>Light</item>
-        <item>Amber</item>
-        <item>Brown</item>
-        <item>Dark</item>
-    </string-array>
+    <string name="app_name">Frame Layout Example</string>
 
 </resources>
