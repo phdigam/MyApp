@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="find_beer">Find Beer</string>
+    <string name="beer_types">Beer types</string>
+    <string name="beer_color_is">Beer color is %1$s</string>
+</resources>
