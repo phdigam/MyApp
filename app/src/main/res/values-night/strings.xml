@@ -3,4 +3,7 @@
     <string name="find_beer">Find Beer</string>
     <string name="beer_types">Beer types</string>
     <string name="beer_color_is">Beer color is %1$s</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
 </resources>
