@@ -11,11 +11,30 @@ class MainActivity : AppCompatActivity() {
     lateinit var stopwatch:Chronometer // Хронометр
     var running = false // Хронометр работает?
     var offset: Long = 0 // Базовое смещение
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    val OFFSET_KEY = "offset" // String
+    val RUNNING_KEY = "running" // String
+    val BASE_KEY = "base" // String
+
+    override fun onCreate(savedInstanceState: Bundle?) {  // метод родительского класса типа Bundle
+         // т.е. связка(пара) ключь типа String, и значение (тип, указываем тип сохраняемой переменной)
+        super.onCreate(savedInstanceState)  // если правильно понял то здесь мы "говорим" IDE что
+        // переопределяется метод onCreate суперкласса Activity
         setContentView(R.layout.activity_main)
 
-        stopwatch = findViewById<Chronometer>(R.id.stopwatch)
+        stopwatch = findViewById(R.id.stopwatch)
+
+        if (savedInstanceState != null) {
+            offset = savedInstanceState.getLong(OFFSET_KEY)
+            running = savedInstanceState.getBoolean(RUNNING_KEY)
+            if (running){
+                stopwatch.base = savedInstanceState.getLong(BASE_KEY)
+                stopwatch.start()
+            } else {
+                setBaseTime()
+            }
+        }
+
         val startButton = findViewById<Button>(R.id.start_button)
         startButton.setOnClickListener {
             if(!running) {
@@ -38,6 +57,14 @@ class MainActivity : AppCompatActivity() {
             offset = 0
             setBaseTime()
         }
+
+    }
+
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.putLong(OFFSET_KEY, offset)
+        savedInstanceState.putBoolean(RUNNING_KEY, running)
+        savedInstanceState.putLong(BASE_KEY, stopwatch.base)
+        super.onSaveInstanceState(savedInstanceState)
     }
 
     private fun saveOffset() {
