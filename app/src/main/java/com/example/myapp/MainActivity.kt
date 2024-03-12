@@ -22,9 +22,11 @@ class MainActivity : AppCompatActivity() {
         // переопределяется метод onCreate суперкласса Activity
         setContentView(R.layout.activity_main)
 
-        stopwatch = findViewById(R.id.stopwatch)
+        stopwatch = findViewById(R.id.stopwatch)  // ищем вьюшку с id stopwatch
+                // в нашем случае это секундомер ,со всеми его методами
 
-        if (savedInstanceState != null) {
+        if (savedInstanceState != null) {  // если в Bundle что то уже попало, то присваиваем переменным
+            // сохраненные значения
             offset = savedInstanceState.getLong(OFFSET_KEY)
             running = savedInstanceState.getBoolean(RUNNING_KEY)
             if (running){
@@ -58,6 +60,40 @@ class MainActivity : AppCompatActivity() {
             setBaseTime()
         }
 
+    }
+
+    override fun onStop() {  //сохраняем текущий "снимок" программы при переходе в фон
+        super.onStop()
+        if (running){
+            saveOffset()
+            stopwatch.stop()
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (running){
+            saveOffset()
+            stopwatch.stop()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (running){
+            setBaseTime()
+            stopwatch.start()
+            offset = 0
+        }
+    }
+
+    override fun onRestart() { // возобновляем работу программы с последнего "снимка" проги
+        super.onRestart()
+        if (running) {
+            setBaseTime()
+            stopwatch.start()
+            offset = 0
+        }
     }
 
     override fun onSaveInstanceState(savedInstanceState: Bundle) {
