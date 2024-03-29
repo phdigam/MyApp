@@ -7,12 +7,12 @@
     android:gravity="center_horizontal"
     tools:context=".WelcomFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="20dp"
+        android:layout_margin="30dp"
         android:textSize="20sp"
         android:text="@string/welcome_text" />
 
@@ -37,6 +37,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:minHeight="48dp"
         android:entries="@array/beer_colors"/>
+
+
 
 </LinearLayout>
