@@ -9,7 +9,7 @@
         android:id="@+id/welcomFragment"
         android:name="com.example.myapp.WelcomFragment"
         android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" >
+        tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
