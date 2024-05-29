@@ -13,10 +13,22 @@
         <action
             android:id="@+id/action_welcomFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_welcomFragment_to_anotherWelcomFragment"
+            app:destination="@id/anotherWelcomFragment" />
     </fragment>
     <fragment
         android:id="@+id/messageFragment"
         android:name="com.example.myapp.MessageFragment"
         android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_message"/>
+    <fragment
+        android:id="@+id/anotherWelcomFragment"
+        android:name="com.example.myapp.AnotherWelcomFragment"
+        android:label="fragment_another_welcom"
+        tools:layout="@layout/fragment_another_welcom">
+    <action
+        android:id="@+id/action_anotherWelcomFragment_to_messageFragment"
+        app:destination="@+id/messageFragment"/>
+    </fragment>
 </navigation>

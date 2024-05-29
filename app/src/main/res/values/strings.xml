@@ -16,5 +16,7 @@ Click on the Start button to begin.</string>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="doubleStart">Открытие \nдополнительного окна</string>
+    <string name="enter_code">Enter code</string>
 
 </resources>

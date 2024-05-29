@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Enter code"
+        android:hint="@string/enter_code"
         android:inputType="numberDecimal"
         android:minWidth="70dp"
         android:minHeight="48dp"
@@ -39,6 +39,13 @@
         android:layout_marginTop="20dp"
         android:minHeight="48dp"
         android:entries="@array/beer_colors"/>
+
+    <Button
+        android:id="@+id/doubleStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/doubleStart"/>
 
 
 

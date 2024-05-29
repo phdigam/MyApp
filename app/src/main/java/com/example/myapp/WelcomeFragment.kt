@@ -17,9 +17,13 @@ class WelcomFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_welcome, container, false)
         val startButton = view.findViewById<Button>(R.id.start)
+        val doubleStartButton = view.findViewById<Button>(R.id.doubleStart)
 
         startButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_welcomFragment_to_messageFragment)
+        }
+        doubleStartButton.setOnClickListener(){
+            view.findNavController().navigate(R.id.action_welcomFragment_to_anotherWelcomFragment)
         }
         return view
     }
