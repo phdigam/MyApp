@@ -2,5 +2,6 @@
 <resources>
     <string name="find_beer">Find Beer</string>
     <string name="beer_types">Beer types</string>
-    <string name="beer_color_is">Beer color is %1$s</string>
+    <string name="inbox">INBOX</string>
+    <string name="help">Help</string>
 </resources>
