@@ -4,4 +4,6 @@
     <string name="beer_types">Beer types</string>
     <string name="inbox">INBOX</string>
     <string name="help">Help</string>
+    <string name="sent_items">Sent Items</string>
+    <string name="support">Support</string>
 </resources>
