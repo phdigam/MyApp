@@ -2,5 +2,5 @@
 <resources>
     <string name="find_beer">Find Beer</string>
     <string name="beer_types">Beer types</string>
-    <string name="beer_color_is">Beer color is %1$s</string>
+    <string name="this_is_the_order_fragment">This is the order fragment</string>
 </resources>
