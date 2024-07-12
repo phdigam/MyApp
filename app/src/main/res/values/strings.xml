@@ -13,5 +13,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="this_is_the_order_fragment">This is the order fragment</string>
+    <string name="which_type_of_pizza_woud_you_like">Which type of pizza woud you like</string>
 
 </resources>

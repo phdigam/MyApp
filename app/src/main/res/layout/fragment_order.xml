@@ -40,12 +40,73 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/this_is_the_order_fragment"/>
+            android:padding="16dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/which_type_of_pizza_woud_you_like" />
+
+        <RadioGroup
+            android:id="@+id/pizza_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_diavolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diavolo"/>
+
+
+            <RadioButton
+                android:id="@+id/radio_funghi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Funghi"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please choose any extras"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/parmesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parmesan"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chili_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chili oil"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_send"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

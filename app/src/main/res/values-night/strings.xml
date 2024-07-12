@@ -3,4 +3,5 @@
     <string name="find_beer">Find Beer</string>
     <string name="beer_types">Beer types</string>
     <string name="this_is_the_order_fragment">This is the order fragment</string>
+    <string name="which_type_of_pizza_woud_you_like">Which type of pizza woud you like</string>
 </resources>
