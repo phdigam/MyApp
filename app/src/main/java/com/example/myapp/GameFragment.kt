@@ -51,7 +51,7 @@ class GameFragment : Fragment() {
         return message
     }
 
-    private fun isLost(): = livesLeft <= 0
+    private fun isLost() = livesLeft <= 0
 
     private fun isWon() = secretWord.equals(secretWordDisplay, true)
 
